@@ -1,0 +1,132 @@
+{
+  "name": "NEO-Counter",
+  "private": false,
+  "version": "0.0.1",
+  "description": "Lists information about near orbital objects",
+  "keywords": [
+    "NEO",
+    "orbital objects"
+  ],
+  "main": "app.js",
+  "engines": {
+    "node": ">=6.10.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "Android >= 4",
+    "Explorer >= 10",
+    "Firefox >= 40",
+    "iOS >= 7",
+    "Safari >= 7"
+  ],
+  "dependencies": {
+    "axios": "^0.16.1",
+    "babel-polyfill": "^6.26.0",
+    "history": "^4.7.2",
+    "material-ui": "^0.20.0",
+    "moment": "^2.20.1",
+    "normalize-styl": "^4.1.1",
+    "prop-types": "^15.6.0",
+    "react": "^15.6.1",
+    "react-css-modules": "^4.6.0",
+    "react-dom": "^15.6.1",
+    "react-hot-loader": "^3.0.0-beta.7",
+    "react-input-mask": "^1.1.0",
+    "react-redux": "^5.0.6",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "react-router-redux": "^5.0.0-alpha.8",
+    "redux": "^3.6.0",
+    "redux-logger": "^3.0.1",
+    "redux-promise-middleware": "^4.2.0",
+    "redux-thunk": "^2.2.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^7.2.0",
+    "babel-jest": "^19.0.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-plugin-transform-object-assign": "^6.22.0",
+    "babel-plugin-transform-react-constant-elements": "^6.23.0",
+    "babel-plugin-transform-react-inline-elements": "^6.22.0",
+    "babel-plugin-transform-react-remove-prop-types": "^0.4.10",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.22.0",
+    "case-sensitive-paths-webpack-plugin": "^1.1.4",
+    "chunk-manifest-webpack2-plugin": "^1.0.1",
+    "copy-webpack-plugin": "^4.0.1",
+    "css-loader": "^0.27.3",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-loader": "^1.6.3",
+    "eslint-plugin-flowtype": "^2.30.4",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jest": "^20.0.3",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.10.3",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^0.10.1",
+    "html-webpack-harddisk-plugin": "^0.1.0",
+    "html-webpack-plugin": "^2.29.0",
+    "inline-manifest-webpack-plugin": "^3.0.1",
+    "node-sass": "^4.5.3",
+    "optimize-css-assets-webpack-plugin": "^3.2.0",
+    "postcss-loader": "^1.3.3",
+    "redux-devtools": "^3.3.2",
+    "redux-devtools-dock-monitor": "^1.1.1",
+    "redux-devtools-extension": "^2.13.0",
+    "redux-devtools-log-monitor": "^1.2.0",
+    "resolve-url-loader": "^2.1.0",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.15.0",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.1",
+    "uglifyjs-webpack-plugin": "^1.1.3",
+    "url-loader": "^0.5.9",
+    "webpack": "^3.5.4",
+    "webpack-bundle-analyzer": "^2.9.1",
+    "webpack-chunk-hash": "^0.4.0",
+    "webpack-dev-server": "^2.6.1",
+    "webpack-merge": "^4.1.0"
+  },
+  "jest": {
+    "verbose": true,
+    "globals": {
+      "window": true,
+      "NODE_ENV": "test"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(spec))\\.jsx?$",
+    "moduleFileExtensions": [
+      "js",
+      "jsx"
+    ],
+    "moduleDirectories": [
+      "<rootDir>/node_modules",
+      "<rootDir>/source/redux"
+    ],
+    "moduleNameMapper": {
+      "^configs/(.*)": "<rootDir>/config/$1",
+      "^framework/(.*)": "<rootDir>/source/framework/$1"
+    },
+    "testPathIgnorePatterns": [
+      "<rootDir>/node_modules/",
+      "<rootDir>/config/",
+      "<rootDir>/public/",
+      "<rootDir>/source/framework",
+      "<rootDir>/source/services"
+    ]
+  },
+  "scripts": {
+    "start": "npm run clean && webpack-dev-server --env=development --config ./config/build/webpack.config.js --progress",
+    "build:dev": "npm run clean && webpack --env=development --config ./config/build/webpack.config.js --progress --colors",
+    "build:prod": "npm run clean && webpack --env=production --config ./config/build/webpack.config.js --progress",
+    "lint": "eslint ./ --ext .jsx --ext .js",
+    "cover": "echo \"TODO: create command to show test coverage\"",
+    "clean": "rm -rf public/assets/** && rm -rf public/assets/*.* && rm -rf public/index.html"
+  },
+  "author": "Anton Kazka",
+  "license": "ISC"
+}

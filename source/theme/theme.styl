@@ -1,0 +1,24 @@
+/**
+ ** This file contains all general styles (e.g. grid, normalize, ui),
+ ** all variables and mixins. It is included directly in webpack.config (see LoaderOptionsPlugin section)
+ */
+
+@require '~normalize-styl'
+
+body
+  min-height: 100vh
+  width: 100%
+  font-family: "RobotoCondensedRegular", Helvetica, Arial, sans-serif
+  font-size: 100%
+  line-height: normal
+  -webkit-font-smoothing: antialiased
+
+a
+  transition: color 0.2s ease-in-out
+
+.app-wrapper
+  display: block;
+  margin: auto;
+
+.hazardous
+  background-color: red !important;
